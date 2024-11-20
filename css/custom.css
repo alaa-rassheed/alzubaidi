@@ -297,7 +297,7 @@ svg {
 
 
 /*  */
-.transition {
+/* .transition {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -320,9 +320,21 @@ svg {
 
 .transition-row.row2 .block {
 	transform-origin: bottom;
-}
+} */
 
 .block {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	z-index: 1000;
+	visibility: hidden;
+	opacity: 0;
+}
+
+/* .block {
 	flex: 1;
 	background-color: var(--accent-color);
 	transform: scaleX(1);
@@ -331,7 +343,7 @@ svg {
 	-ms-transform: scaleX(1);
 	-o-transform: scaleX(1);
 	will-change: transform;
-}
+} */
 
 .preloader {
 	position: fixed;
@@ -649,7 +661,7 @@ header.main-header .header-sticky.active {
 
 .main-menu ul ul li a:hover,
 .main-menu ul ul li a:focus {
-	color: var(--primary-color);
+	color: var(--white-color);
 	background-color: transparent;
 	padding: 8px 20px 8px 23px !important;
 }
@@ -1956,17 +1968,16 @@ header.main-header .header-sticky.active {
 }
 
 .testimonial-body .author-image {
-	width: 56px;
+	width: 100%;
 	height: 56px;
 	margin-right: 10px;
 }
 
 .testimonial-body .author-image img {
-	width: 56px;
-	height: 56px;
+	width: 50%;
+	height: 46px;
 	aspect-ratio: 1/1;
-	object-fit: cover;
-	border-radius: 50%;
+	object-fit: contain;
 }
 
 .testimonial-body .author-content h3 {
@@ -2238,6 +2249,16 @@ header.main-header .header-sticky.active {
 	color: var(--accent-color);
 }
 
+
+.footer-info-box-content p a {
+	color: var(--white-color);
+	transition: all 0.3s ease-in-out;
+}
+
+.footer-info-box-content p:hover a {
+	color: var(--accent-color);
+}
+
 .footer-contact-details .footer-info-box {
 	position: relative;
 	padding-left: 30px;
@@ -2263,6 +2284,7 @@ header.main-header .header-sticky.active {
 	margin-bottom: 0;
 }
 
+
 .footer-copyright {
 	border-top: 1px solid var(--divider-color);
 	padding: 40px 0;
@@ -2272,6 +2294,16 @@ header.main-header .header-sticky.active {
 .footer-copyright-text p {
 	color: var(--white-color);
 	margin: 0;
+}
+
+.footer-copyright-text p a {
+	font-weight: 700;
+	color: var(--white-color);
+	transition: all 0.3s ease-in-out;
+}
+
+.footer-copyright-text p:hover a {
+	color: var(--accent-color);
 }
 
 .footer-links ul {

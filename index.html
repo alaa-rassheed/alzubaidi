@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="author" content="Awaiken">
+    <meta name="author" content="">
     <!-- Page Title -->
     <title>Home - Ahmed Elzubaidi</title>
     <!-- Favicon Icon -->
@@ -26,7 +26,7 @@
     <!-- Swiper Css -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <!-- Font Awesome Icon Css-->
-    <link href="css/all.css" rel="stylesheet" media="screen">
+    <link href="css/all.min.css" rel="stylesheet" media="screen">
     <!-- Animated Css -->
     <link href="css/animate.css" rel="stylesheet">
     <!-- Magnific Popup Core Css File -->
@@ -37,7 +37,7 @@
     <link href="css/custom.css" rel="stylesheet" media="screen">
 </head>
 
-<body>
+<body data-barba="wrapper">
 
     <!-- Preloader Start -->
     <!-- <div class="preloader">
@@ -111,18 +111,13 @@
                                                 <img src="images/flag.webp" alt="flag ksa">
                                             </a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="service-details.html">
-                                                Service Details
-                                            </a>
-                                        </li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                         <!-- Let’s Start Button Start -->
                         <div class="header-btn d-inline-flex">
-                            <a href="#" class="btn-default">+(123) 698-5245</a>
+                            <a href="+966-133617116" class="btn-default">+966-133617116</a>
                         </div>
                         <!-- Let’s Start Button End -->
                     </div>
@@ -135,36 +130,50 @@
     </header>
     <!-- Header End -->
 
-    <main>
+    <main data-barba="container" data-barba-namespace="default">
+
         <!-- Hero Section Start -->
-        <div class="hero bg-image parallaxie">
+        <div class="hero">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                         <!-- Hero Content Start -->
                         <div class="hero-content">
                             <!-- Section Title Start -->
                             <div class="section-title">
-                                <h3 class="wow fadeInUp">welcome to physiocare</h3>
-                                <h1 class="text-anime-style-2" data-cursor="-opaque"><span>Destination</span> For Relief
-                                    &
-                                    Wellness</h1>
-                                <p class="wow fadeInUp" data-wow-delay="0.25s">It is a long established fact that a
-                                    reader
-                                    will be distracted the readable content of a page when looking at layout the point
-                                    of
-                                    using lorem the Ipsum less normal distribution of letters.</p>
+                                <h1 class="text-anime-style-2" data-cursor="-opaque">
+                                    <span>Ahmed Alzubaidi</span>
+                                    For Legal Solutions
+                                </h1>
+                                <p class="wow fadeInUp" data-wow-delay="0.25s">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate aperiam numquam
+                                    pariatur cum? At, quisquam.
+                                </p>
                             </div>
                             <!-- Section Title End -->
 
                             <!-- Hero Content Body Start -->
-                            <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="hero-content-body wow fadeInUp border-0" data-wow-delay="0.5s">
+                                <a href="#" class="btn-default btn-highlighted">Contact us</a>
                                 <a href="#" class="btn-default">explore services</a>
-                                <a href="#" class="btn-default btn-highlighted">book appointment</a>
                             </div>
                             <!-- Hero Content Body End -->
                         </div>
                         <!-- Hero Content End -->
+                    </div>
+
+                    <div class="col-lg-6">
+                        <!-- Hero Image Start -->
+                        <div class="hero-image">
+                            <!-- Hero Img Start -->
+                            <div class="hero-img">
+                                <figure>
+                                    <img src="images/hero.png" alt="hero image">
+                                </figure>
+                            </div>
+                            <!-- Hero Img End -->
+                        </div>
+                        <!-- Hero Image End -->
                     </div>
                 </div>
             </div>
@@ -234,7 +243,7 @@
         <!--  About Us End -->
 
         <!-- Our Service Start -->
-        <div class="our-service">
+        <div id="services" class="our-service">
             <div class="container">
                 <div class="row align-items-center section-row">
                     <div class="col-lg-7">
@@ -605,7 +614,7 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <h3 class="wow fadeInUp">review</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque"><span>What</span> Our Client Say</h2>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque"><span>What</span> Our Clients Say</h2>
                         </div>
                         <!-- Section Title End -->
                     </div>
@@ -636,21 +645,20 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="testimonial-body">
+                                            <div class="testimonial-body d-flex flex-column">
                                                 <div class="author-image">
                                                     <figure class="image-anime">
-                                                        <img src="images/author-1.jpg" alt="">
+                                                        <img src="images/brands/brand-1.jpeg" alt="">
                                                     </figure>
                                                 </div>
                                                 <div class="author-content">
-                                                    <h3>johan duo</h3>
-                                                    <p>professional athlete</p>
+                                                    <h3>Eco</h3>
+                                                    <p>Lorem, ipsum dolor.</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- Testimonial Slide End -->
-
                                     <!-- Testimonial Slide Start -->
                                     <div class="swiper-slide">
                                         <div class="testimonial-item">
@@ -670,21 +678,20 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="testimonial-body">
+                                            <div class="testimonial-body d-flex flex-column">
                                                 <div class="author-image">
                                                     <figure class="image-anime">
-                                                        <img src="images/author-2.jpg" alt="">
+                                                        <img src="images/brands/brand-1.jpeg" alt="">
                                                     </figure>
                                                 </div>
                                                 <div class="author-content">
-                                                    <h3>jane smith</h3>
-                                                    <p>retired teacher</p>
+                                                    <h3>Eco</h3>
+                                                    <p>Lorem, ipsum dolor.</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- Testimonial Slide End -->
-
                                     <!-- Testimonial Slide Start -->
                                     <div class="swiper-slide">
                                         <div class="testimonial-item">
@@ -704,21 +711,20 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="testimonial-body">
+                                            <div class="testimonial-body d-flex flex-column">
                                                 <div class="author-image">
                                                     <figure class="image-anime">
-                                                        <img src="images/author-3.jpg" alt="">
+                                                        <img src="images/brands/brand-1.jpeg" alt="">
                                                     </figure>
                                                 </div>
                                                 <div class="author-content">
-                                                    <h3>robert lee</h3>
-                                                    <p>construction worker</p>
+                                                    <h3>Eco</h3>
+                                                    <p>Lorem, ipsum dolor.</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- Testimonial Slide End -->
-
                                     <!-- Testimonial Slide Start -->
                                     <div class="swiper-slide">
                                         <div class="testimonial-item">
@@ -738,15 +744,15 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="testimonial-body">
+                                            <div class="testimonial-body d-flex flex-column">
                                                 <div class="author-image">
                                                     <figure class="image-anime">
-                                                        <img src="images/author-4.jpg" alt="">
+                                                        <img src="images/brands/brand-1.jpeg" alt="">
                                                     </figure>
                                                 </div>
                                                 <div class="author-content">
-                                                    <h3>banson doe</h3>
-                                                    <p>marathon runner</p>
+                                                    <h3>Eco</h3>
+                                                    <p>Lorem, ipsum dolor.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -762,6 +768,133 @@
             </div>
         </div>
         <!-- Client Testimonial End -->
+
+        <!-- Our Blog Section End -->
+        <div class="our-blog">
+            <div class="container">
+                <div class="row section-row align-items-center">
+                    <div class="col-lg-9">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">Latest News</h3>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">
+                                Read the latest updates of
+                                <br>
+                                <span>Alzubaidi news</span>
+                            </h2>
+                        </div>
+                        <!-- Section Title End -->
+                    </div>
+
+                    <div class="col-lg-3">
+                        <!-- Section Button Start -->
+                        <div class="section-btn wow fadeInUp" data-wow-delay="0.25s">
+                            <a href="#" class="btn-default">view all blog</a>
+                        </div>
+                        <!-- Section Button End -->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <!-- Blog Item Start -->
+                        <div class="blog-item wow fadeInUp">
+                            <!-- Post Featured Image Start-->
+                            <div class="post-featured-image" data-cursor-text="View">
+                                <figure>
+                                    <a href="#" class="image-anime">
+                                        <img src="images/blogs/6.jpeg" alt="blog image">
+                                    </a>
+                                </figure>
+                            </div>
+                            <!-- Post Featured Image End -->
+
+                            <!-- post Item Content Start -->
+                            <div class="post-item-content">
+                                <!-- post Item Body Start -->
+                                <div class="post-item-body">
+                                    <h2><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a></h2>
+                                </div>
+                                <!-- Post Item Body End-->
+
+                                <!-- Post Item Footer Start-->
+                                <div class="post-item-footer">
+                                    <a href="#" class="readmore-btn">read more</a>
+                                </div>
+                                <!-- Post Item Footer End-->
+                            </div>
+                            <!-- post Item Content End -->
+                        </div>
+                        <!-- Blog Item End -->
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <!-- Blog Item Start -->
+                        <div class="blog-item wow fadeInUp" data-wow-delay="0.2s">
+                            <!-- Post Featured Image Start-->
+                            <div class="post-featured-image" data-cursor-text="View">
+                                <figure>
+                                    <a href="#" class="image-anime">
+                                        <img src="images/blogs/2.jpeg" alt="blog image">
+                                    </a>
+                                </figure>
+                            </div>
+                            <!-- Post Featured Image End -->
+
+                            <!-- post Item Content Start -->
+                            <div class="post-item-content">
+                                <!-- post Item Body Start -->
+                                <div class="post-item-body">
+                                    <h2><a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a></h2>
+                                </div>
+                                <!-- Post Item Body End-->
+
+                                <!-- Post Item Footer Start-->
+                                <div class="post-item-footer">
+                                    <a href="#" class="readmore-btn">read more</a>
+                                </div>
+                                <!-- Post Item Footer End-->
+                            </div>
+                            <!-- post Item Content End -->
+                        </div>
+                        <!-- Blog Item End -->
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <!-- Blog Item Start -->
+                        <div class="blog-item wow fadeInUp" data-wow-delay="0.4s">
+                            <!-- Post Featured Image Start-->
+                            <div class="post-featured-image" data-cursor-text="View">
+                                <figure>
+                                    <a href="#" class="image-anime">
+                                        <img src="images/blogs/5.jpeg" alt="">
+                                    </a>
+                                </figure>
+                            </div>
+                            <!-- Post Featured Image End -->
+
+                            <!-- post Item Content Start -->
+                            <div class="post-item-content">
+                                <!-- post Item Body Start -->
+                                <div class="post-item-body">
+                                    <h2><a href="#">Importance of correct posture and how to improve it</a></h2>
+                                </div>
+                                <!-- Post Item Body End-->
+
+                                <!-- Post Item Footer Start-->
+                                <div class="post-item-footer">
+                                    <a href="#" class="readmore-btn">read more</a>
+                                </div>
+                                <!-- Post Item Footer End-->
+                            </div>
+                            <!-- post Item Content End -->
+                        </div>
+                        <!-- Blog Item End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Our Blog End -->
     </main>
 
     <!-- Footer Start -->
@@ -773,7 +906,7 @@
                     <div class="about-footer">
                         <!-- Footer Logo Start -->
                         <div class="footer-logo">
-                            <img src="images/footer-logo.png" alt="">
+                            <img src="images/logo.png" alt="">
                         </div>
                         <!-- Footer Logo End -->
 
@@ -815,9 +948,11 @@
                     <div class="about-service-list">
                         <h3>more services</h3>
                         <ul>
-                            <li><a href="#">manual therapy</a></li>
-                            <li><a href="#">chronic pain</a></li>
-                            <li><a href="#">hand therapy</a></li>
+                            <li><a href="#">Legal Consultation</a></li>
+                            <li><a href="#">Arbitration</a></li>
+                            <li><a href="#">Corporate Law</a></li>
+                            <li><a href="#">Banking And Finance</a></li>
+                            <li><a href="#">Litigation</a></li>
                         </ul>
                     </div>
                     <!-- About Links End -->
@@ -835,7 +970,11 @@
                                     <img src="images/icon-phone.svg" alt="">
                                 </div>
                                 <div class="footer-info-box-content">
-                                    <p>(+0) 789 3456 012</p>
+                                    <p>
+                                        <a href="tel:+966-133617116">
+                                            +966-133617116
+                                        </a>
+                                    </p>
                                 </div>
                             </div>
                             <!-- Footer Info Box End -->
@@ -846,7 +985,9 @@
                                     <img src="images/icon-mail.svg" alt="">
                                 </div>
                                 <div class="footer-info-box-content">
-                                    <p>domain@gmail.com</p>
+                                    <p>
+                                        <a href="mailto:info@azco.sa">info@azco.sa</a>
+                                    </p>
                                 </div>
                             </div>
                             <!-- Footer Info Box End -->
@@ -857,7 +998,10 @@
                                     <img src="images/icon-location.svg" alt="">
                                 </div>
                                 <div class="footer-info-box-content">
-                                    <p>24/11 Robert Road,New York,USA</p>
+                                    <p>
+                                        Business Tower 101, King Abdulaziz St. P.O.
+                                        Box 8110 Jubail 31951, Saudi Arabia
+                                    </p>
                                 </div>
                             </div>
                             <!-- Footer Info Box End -->
@@ -874,7 +1018,9 @@
                     <div class="col-lg-6 col-md-6">
                         <!-- Footer Copyright Start -->
                         <div class="footer-copyright-text">
-                            <p>Copyright 2024 Physiocare. All Rights Reserved.</p>
+                            <p>
+                                All Rights Reserved Al-Zubaidi & Co., Developed and Designed by <a href="#">BeGroup</a>.
+                            </p>
                         </div>
                         <!-- Footer Copyright End -->
                     </div>
@@ -883,8 +1029,8 @@
                         <!-- Footer Social Link Start -->
                         <div class="footer-links">
                             <ul>
-                                <li><a href="#">about us</a></li>
-                                <li><a href="#">services</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="service-details.html">services</a></li>
                                 <li><a href="#">contact us</a></li>
                             </ul>
                         </div>
@@ -917,6 +1063,7 @@
     <!-- Parallax js -->
     <script src="js/parallaxie.js"></script>
     <!-- MagicCursor js file -->
+    <script src="https://unpkg.com/@barba/core"></script>
     <script src="js/gsap.min.js"></script>
     <script src="js/magiccursor.js"></script>
     <!-- Text Effect js file -->

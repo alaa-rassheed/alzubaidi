@@ -1447,3 +1447,362 @@
     </div>
 </div>
 <!-- Scrolling Ticker Section End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(function ($) {
+"use strict";
+
+var $window = $(window);
+var $body = $('body');
+
+/* Preloader Effect */
+// $window.on('load', function () {
+// $(".preloader").fadeOut(600);
+// });
+
+/* Sticky Header */
+if ($('.active-sticky-header').length) {
+$window.on('resize', function () {
+setHeaderHeight();
+});
+
+function setHeaderHeight() {
+$("header.main-header").css("height", $('header .header-sticky').outerHeight());
+}
+
+$(window).on("scroll", function () {
+var fromTop = $(window).scrollTop();
+setHeaderHeight();
+var headerHeight = $('header .header-sticky').outerHeight()
+$("header .header-sticky").toggleClass("hide", (fromTop > headerHeight + 100));
+$("header .header-sticky").toggleClass("active", (fromTop > 600));
+});
+}
+
+/* Slick Menu JS */
+function initSlickMenu() {
+$('#menu').slicknav({
+label: '',
+prependTo: '.responsive-menu'
+});
+}
+
+/* Back to Top */
+if ($("a[href='#top']").length) {
+$("a[href='#top']").click(function () {
+$("html, body").animate({ scrollTop: 0 }, "slow");
+return false;
+});
+}
+
+/* Hero Slider Layout JS */
+function initHeroSlider() {
+if ($('.hero-slider-layout').length) {
+const hero_slider_layout = new Swiper('.hero-slider-layout .swiper', {
+slidesPerView: 1,
+speed: 1000,
+spaceBetween: 0,
+loop: true,
+autoplay: {
+delay: 4000,
+},
+pagination: {
+el: '.swiper-pagination',
+clickable: true,
+},
+});
+}
+}
+
+/* Testimonial Slider JS */
+function initTestimonialSlider() {
+if ($('.testimonial-slider').length) {
+const testimonial_slider = new Swiper('.testimonial-slider .swiper', {
+slidesPerView: 1,
+speed: 1000,
+spaceBetween: 30,
+loop: true,
+autoplay: {
+delay: 3000,
+},
+navigation: {
+nextEl: '.testimonial-button-next',
+prevEl: '.testimonial-button-prev',
+},
+pagination: {
+el: '.swiper-pagination',
+clickable: true,
+},
+breakpoints: {
+768: {
+slidesPerView: 2,
+},
+991: {
+slidesPerView: 3,
+}
+}
+});
+}
+}
+
+/* Skill Bar */
+function initSkillBar() {
+if ($('.skills-progress-bar').length) {
+$('.skills-progress-bar').waypoint(function () {
+$('.skillbar').each(function () {
+$(this).find('.count-bar').animate({
+width: $(this).attr('data-percent')
+}, 2000);
+});
+}, {
+offset: '50%'
+});
+}
+}
+
+/* Youtube Background Video JS */
+function initYoutubeBackground() {
+if ($('#herovideo').length) {
+var myPlayer = $("#herovideo").YTPlayer();
+}
+}
+
+/* Counter */
+function initCounter() {
+if ($('.counter').length) {
+$('.counter').counterUp({ delay: 6, time: 3000 });
+}
+}
+
+/* Initialize animations */
+function initAnimations() {
+/* Image Reveal Animation */
+if ($('.reveal').length) {
+gsap.registerPlugin(ScrollTrigger);
+let revealContainers = document.querySelectorAll(".reveal");
+revealContainers.forEach((container) => {
+let image = container.querySelector("img");
+let tl = gsap.timeline({
+scrollTrigger: {
+trigger: container,
+toggleActions: "play none none none"
+}
+});
+tl.set(container, { autoAlpha: 1 });
+tl.from(container, 1, {
+xPercent: -100,
+ease: Power2.out
+});
+tl.from(image, 1, {
+xPercent: 100,
+scale: 1,
+delay: -1,
+ease: Power2.out
+});
+});
+}
+
+/* Text Effect Animations */
+if ($('.text-anime-style-1').length) {
+let animatedTextElements = document.querySelectorAll('.text-anime-style-1');
+animatedTextElements.forEach((element) => {
+let animationSplitText = new SplitText(element, { type: "chars, words" });
+gsap.from(animationSplitText.words, {
+duration: 1,
+delay: 0.5,
+x: 20,
+autoAlpha: 0,
+stagger: 0.05,
+scrollTrigger: { trigger: element, start: "top 85%" },
+});
+});
+}
+
+if ($('.text-anime-style-2').length) {
+let animatedTextElements = document.querySelectorAll('.text-anime-style-2');
+animatedTextElements.forEach((element) => {
+let animationSplitText = new SplitText(element, { type: "chars, words" });
+gsap.from(animationSplitText.chars, {
+duration: 1,
+delay: 0.1,
+x: 20,
+autoAlpha: 0,
+stagger: 0.03,
+ease: "power2.out",
+scrollTrigger: { trigger: element, start: "top 85%" },
+});
+});
+}
+
+if ($('.text-anime-style-3').length) {
+let animatedTextElements = document.querySelectorAll('.text-anime-style-3');
+animatedTextElements.forEach((element) => {
+if (element.animation) {
+element.animation.progress(1).kill();
+element.split.revert();
+}
+element.split = new SplitText(element, {
+type: "lines,words,chars",
+linesClass: "split-line",
+});
+gsap.set(element, { perspective: 400 });
+gsap.set(element.split.chars, {
+opacity: 0,
+x: "50",
+});
+element.animation = gsap.to(element.split.chars, {
+scrollTrigger: { trigger: element, start: "top 90%" },
+x: "0",
+y: "0",
+rotateX: "0",
+opacity: 1,
+duration: 1,
+ease: Back.easeOut,
+stagger: 0.02,
+});
+});
+}
+}
+
+/* Popup Video */
+function initPopupVideo() {
+if ($('.popup-video').length) {
+$('.popup-video').magnificPopup({
+type: 'iframe',
+mainClass: 'mfp-fade',
+removalDelay: 160,
+preloader: false,
+fixedContentPos: true
+});
+}
+}
+
+/* Initialize all scripts */
+function initializeScripts() {
+initSlickMenu();
+initHeroSlider();
+initTestimonialSlider();
+initSkillBar();
+initYoutubeBackground();
+initCounter();
+initAnimations();
+initPopupVideo();
+new WOW().init();
+}
+
+/* Barba.js Page Transitions */
+function initBarba() {
+barba.init({
+transitions: [{
+name: 'default-transition',
+once({ current, next, trigger }) {
+const transitionBlocks = document.querySelectorAll(".block");
+return new Promise(resolve => {
+gsap.set(transitionBlocks, {
+scaleY: 1,
+visibility: "visible"
+});
+gsap.to(transitionBlocks, {
+scaleY: 0,
+duration: 1,
+stagger: {
+each: 0.1,
+from: "start",
+grid: "auto",
+axis: "x",
+},
+ease: "power4.inOut",
+onComplete: () => {
+gsap.set(transitionBlocks, { visibility: "hidden" });
+resolve();
+}
+});
+});
+},
+
+leave({ current, next, trigger }) {
+const transitionBlocks = document.querySelectorAll(".block");
+return new Promise(resolve => {
+gsap.set(transitionBlocks, {
+visibility: "visible",
+scaleY: 0
+});
+gsap.to(transitionBlocks, {
+scaleY: 1,
+duration: 1,
+stagger: {
+each: 0.1,
+from: "start",
+grid: [2, 5],
+axis: "x",
+},
+ease: "power4.inOut",
+onComplete: resolve
+});
+});
+},
+
+enter({ current, next, trigger }) {
+const transitionBlocks = document.querySelectorAll(".block");
+return new Promise(resolve => {
+window.scrollTo(0, 0);
+gsap.to(transitionBlocks, {
+scaleY: 0,
+duration: 1,
+stagger: {
+each: 0.1,
+from: "start",
+grid: "auto",
+axis: "x",
+},
+ease: "power4.inOut",
+onComplete: () => {
+gsap.set(transitionBlocks, { visibility: "hidden" });
+resolve();
+}
+});
+});
+},
+
+after() {
+initializeScripts();
+}
+}],
+
+preventRunning: true,
+
+views: [{
+namespace: 'default',
+beforeLeave({ current, next, trigger }) {
+if (trigger && (
+!trigger.href ||
+trigger.href.startsWith('#') ||
+trigger.href === window.location.pathname
+)) {
+return false;
+}
+}
+}]
+});
+}
+
+/* Initialize everything when document is ready */
+$(document).ready(function () {
+initializeScripts();
+initBarba();
+});
+
+})(jQuery);
